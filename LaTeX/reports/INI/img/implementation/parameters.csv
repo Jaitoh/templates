@@ -1,0 +1,4 @@
+,chip,core,neuron_gain_c,neuron_gain_f,neuron_leak_c,neuron_leak_f,neuron_refactory_c,neuron_refactory_f,AMPA_gain_c,AMPA_gain_f,AMPA_leak_c,AMPA_leak_f,AMPA_weight_c,AMPA_weight_f,NMDA_gain_c,NMDA_gain_f,NMDA_leak_c,NMDA_leak_f,NMDA_weight_c,NMDA_weight_f,GABA_A_gain_c,GABA_A_gain_f,GABA_A_leak_c,GABA_A_leak_f,GABA_A_weight_c,GABA_A_weight_f,GABA_B_gain_c,GABA_B_gain_f,GABA_B_leak_c,GABA_B_leak_f,GABA_B_weight_c,GABA_B_weight_f
+0,0,0,5,80,4,80,4,128,4,80,4,80,4,80,4,80,4,80,4,80,4,80,4,80,4,80,4,80,4,80,4,80
+1,0,1,5,80,4,80,4,128,4,80,4,80,6,50,4,80,4,80,3,50,4,80,2,200,7,200,4,80,4,80,4,80
+2,0,2,5,80,4,80,4,128,4,80,4,80,5,200,4,80,4,80,7,50,4,80,4,80,7,20,4,80,4,80,4,80

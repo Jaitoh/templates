@@ -1,0 +1,43 @@
+\chapter{Conclusion}
+
+A point attractor network has been implemented on the DYNAPSE board by constructing a E-I balanced network and fine tuning the bias.
+
+\section{Network on chip}
+% network structure
+\subsection*{Structure}
+The network consists of one excitatory (E) population and one inhibitory (I) population as shown in figure \ref{fig:NNstructure}. The excitatory population consists of a attractive population $E_{att}$ and a background population $E_{bkg}$.
+
+E population connect to I population with AMPA and I population propagate its signal through GABA\_A.
+I population recurrently connect to itself through GABA\_A. $E_{att}$ and $E_{bkg}$ population recurrently connect to themself through AMPA and NMDA respectively.
+
+This network is a kind of derivative feedback network as shown in figure \ref{fig:reading_ei_persistant}. It has been shown that derivative network is very efficient in maintaining the state of the E populations.
+
+\subsection*{Size}
+% network size
+The implemented network consists of 56 excitatory neurons and 18 inhibitory neurons (the ratio is about 3:1), 74 neurons in total compared with 127 neurons used in the literature. 
+
+%It is a smaller network and the size of the network can be one of the reason of the relative low attractor "high" state of the E population.
+
+\subsection*{Bias}
+% parameter tuning
+To increase a neuron's firing rate, we can either increase the weight or decrease the of leakage of the synapse.
+
+A fine tuning of the biases in different core is required to realise the balance between E population and I population. Basically, it is intended to achieve slow E population recurrent response and fast I population negative feedback\cite{limBalancedCorticalMicrocircuitry2013}.
+
+\subsection*{Others}
+% developed visulisation methods
+The relation between coarse, fine value and the linear applied bias value is measured for DYNAPSE board 020 which helps with the parameter tuning.
+Besides, to help validate the connections, a network connection visualisation tool is developed as shown in figure \ref{fig:NNonboard}. 
+
+\section{Point attractor behaviour}
+% attractor behavior discussion
+The E population will change state from "low" to "high" with relative strong stimulation and the excitatory threshold is around 5Hz. Similarly, the network is resistive to small external perturbations, the inhibitory threshold required to change the state from "high" to "low" is more than 10 Hz.
+% application of attractor behavior
+The point attractor behaviour is believed to be one of the key behaviours of the working memory.\\
+
+% meaning of this project
+\section{Discussions}
+
+A lot more interesting topics can be further investigated based on this implementation method, like checking the relation between network size and the attractor state, how the input stimuli duration and strength can influence the attractor state, how to concatenate several EI balanced population to realise the propagation of information in multiple layers. \\
+
+Concerning the network structures, some further implementations can be made to compare the derivative feedback network with pure positive feedback structures.

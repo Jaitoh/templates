@@ -1,0 +1,85 @@
+% http://www.idsc.ethz.ch/education/theses-semester-projects.html
+% IDSC LaTeX Thesis Template
+% 
+% Author(s):	Eric Müller
+% 				Institute for Dynamic Systems and Control
+% 				Swiss Federal Institute of Technology (ETH) Zurich
+% 
+% Created:		2004/04/02  (Eric Mueller)
+% 
+% Notes: Has been tested on Windows 7 + MikTeX + TeXnicCenter
+%
+% Revisions: 	2009/05/29  (Soren Ebbesen)
+% 				    2011/03/22	(Soren Ebbesen)
+%             2013/03/08	(Soren Ebbesen)
+%             2014/03/13	(Soren Ebbesen)
+% ______________________________________________________________________________
+\documentclass[10pt,twoside,a4paper,fleqn]{report}
+\usepackage{subcaption}
+
+% \usepackage{pdfpages}
+\usepackage[english,lr]{ethidsc} % Special IDSC styles and commands      	
+								% {german}/english: language of headings, etc.
+								% {st}/bt/mt/lr: {semester}/bachelor/master thesis/lecture report 
+\usepackage{graphicx}							
+% Page header (don't change)____________________________________________________
+\setlength{\parindent}{0em}                 % Disable parindent
+\rhead[\nouppercase{\rightmark}]{\thepage}  % Special headings
+\lhead[\thepage]{\nouppercase{\leftmark}}   % Special headings
+\cfoot{}                                    % Special headings
+
+
+% Title page ___________________________________________________
+\title{E-I Balanced Point Attractor Network on Neuromorphic Chips}
+
+\studentA{Wenjie He}
+\ethidA{19-771-666}
+\semesterA{5}
+\emailA{wenjhe@student.ethz.ch}
+
+\studentB{Junren Chen}
+\ethidB{xx-xxx-xxx}
+\semesterB{}
+\emailB{@student.ethz.ch}
+
+\supervision{Giacomo Indiveri \\ Elisa Donati \\ Jingyue Zhao }
+\date{June 2021}
+
+% Begin document________________________________________________________________
+\begin{document}
+
+\maketitle 							% Create title page
+
+
+% Preamble______________________________________________________________________
+
+\tableofcontents
+\pagenumbering{roman} 				% Begin roman page numbering (i,ii,...)
+
+% \input{chapters/preamble}
+
+% Chapters______________________________________________________________________
+
+\pagestyle{fancy}               	% Fancy headings
+\pagenumbering{arabic}				% Begin arabic page numbering (1,2,...)
+
+\input{chapters/Introduction} 
+% \cleardoublepage
+\input{chapters/Implementation} 
+% \input{chapters/ML_Network.tex} % multilayer network
+% \cleardoublepage
+ \input{chapters/Conclusion}
+% \cleardoublepage 
+
+% Appendix______________________________________________________________________
+% \appendix
+% \input{chapters/appendix}
+
+
+% Bibliography__________________________________________________________________
+% Literature (Additional references can be added to the .bib-file manually, or by using, for example, the free application JabRef). Compile in the following order: latex -bibtex -latex -latex
+
+\bibliographystyle{plain}
+\bibliography{bib}
+
+\end{document}
