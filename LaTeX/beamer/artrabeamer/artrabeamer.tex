@@ -74,6 +74,7 @@
 %-
 %-> Global themes
 %-
+%\usetheme{CambridgeUS}%
 \usetheme{CambridgeUS}%
 %- Options:
 %- [<Boadilla|CambridgeUS|default|...>]
@@ -100,7 +101,7 @@
 %- *** Miniframes
 \useoutertheme[%
     %footline=empty,% suppressed the footline (default).
-    %footline=authorinstitute,% shows the author's name and the institute in the footline.
+%    footline=authorinstitute,% shows the author's name and the institute in the footline.
     %footline=authortitle,% shows the author's name and the title in the footline.
     %footline=institutetitle,% shows the institute and the title in the footline.
     %footline=authorinstitutetitle,% shows all three in the footline.
@@ -316,7 +317,7 @@
 %- series(light, bold,...): \bfseries, \mdseries.
 %-
 %- *** Structure font
-%\setbeamerfont{structure}{}
+\setbeamerfont{structure}{size=\Large, family=\rmfamily, series=\bfseries}
 %\setbeamerfont{tiny structure}{size=\tiny}
 %-
 %- *** Normal font
@@ -328,18 +329,20 @@
 %\setbeamerfont{projected text}{parent={tiny structure}}
 %-
 %- *** Titlepage font
-%\setbeamerfont{title}{parent=structure, size=\large}% shape=\itshape,family=\rmfamily
+\setbeamerfont{title}{parent=structure}%, size=\Large, family=\rmfamily, series=\bfseries}% shape=\itshape,family=\rmfamily
 %\setbeamerfont{title in head/foot}{parent=title, size=\tiny}
-%\setbeamerfont{subtitle}{parent=title, size=\normalsize}
-%\setbeamerfont{author}{parent=title, size=\normalsize}
+%\setbeamerfont{subtitle}{parent=title, size=\large}
+\setbeamerfont{author}{size=\small, family=\rmfamily}
 %\setbeamerfont{author in head/foot}{parent=title, size=\tiny}
-\setbeamerfont{institute}{parent=structure, size=\normalsize, series=\mdseries}
+\setbeamerfont{institute}{parent=author}%, size=\normalsize, series=\mdseries}
 %\setbeamerfont{institute in head/foot}{parent=title, size=\tiny}
 %\setbeamerfont{date}{parent=institute}
+\setbeamerfont{date}{parent=author}%, size=\normalsize, series=\mdseries}
 %\setbeamerfont{date in head/foot}{parent=title, size=\tiny}
 %-
 %- *** Frame title font
-\setbeamerfont{frametitle}{parent=structure,size=\large}
+%\setbeamerfont{frametitle}{parent=structure,size=\large}
+\setbeamerfont{frametitle}{parent=structure,size=\large, family=\rmfamily}
 %\setbeamerfont{framesubtitle}{parent=frametitle,size=\footnotesize}
 %-
 %- *** Part fonts

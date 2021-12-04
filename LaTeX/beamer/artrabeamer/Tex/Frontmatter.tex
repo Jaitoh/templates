@@ -21,9 +21,44 @@
             \end{beamercolorbox}}%
         \vskip0pt%
     }
+	
+	\makeatletter
+	\setbeamertemplate{title page}{
+		\vbox{}
+		\vskip10em\par
+		\vfill
+		\begingroup
+		\centering
+		\begin{beamercolorbox}[sep=8pt,center]{title}
+			\usebeamerfont{title}\inserttitle\par%
+			\ifx\insertsubtitle\@empty%
+			\else%
+			\vskip0.25em%
+			{\usebeamerfont{subtitle}\usebeamercolor[fg]{subtitle}\insertsubtitle\par}%
+			\fi%     
+		\end{beamercolorbox}%
+		\vskip5em\par
+		\begin{beamercolorbox}[sep=2pt,center]{author}
+			\usebeamerfont{author}\insertauthor
+		\end{beamercolorbox}
+%		\begin{beamercolorbox}[sep=2pt,center]{institute}
+%			\usebeamerfont{institute}\insertinstitute
+%		\end{beamercolorbox}
+		\begin{beamercolorbox}[sep=2pt,center]{date}
+			\usebeamerfont{date}\insertdate
+		\end{beamercolorbox}\vskip0.5em
+		{\usebeamercolor[fg]{titlegraphic}\inserttitlegraphic\par}
+		\endgroup
+		\vfill
+	}
+	\makeatother
+	
     \begin{frame}[plain]
         \titlepage%
-        %\tikzart[t=p,x=0,y=-4,w=4]{logo_uw}
+%        \tikzart[t=m]{}% draw coordinate system
+        \tikzart[t=p,x=-6,y=4,w=4]{uzh_logo_e_pos}
+        \tikzart[t=p,x=6,y=4,w=4]{ethlogo}
+                
         \addtocounter{framenumber}{-1}% modify the counter to exclude a frame from total count
     \end{frame}%
 }
